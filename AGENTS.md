@@ -1,0 +1,53 @@
+# Happy Seal Games Website Guide
+
+## Project
+
+Static, bilingual Happy Seal Games studio website. No build step or framework.
+
+- `index.html`: page structure, links, accessibility attributes.
+- `styles.css`: studio theme, ZAR comic theme, responsive layout.
+- `script.js`: Turkish/English copy, automatic language choice, menu, mobile previews, reveal behavior.
+- `assets/images/`: studio, social, and game media.
+
+## Product Rules
+
+- Introduce Happy Seal Games before ZAR.
+- Keep the general studio design clean. Concentrate comic-book styling inside the ZAR section.
+- Keep Roadmap inside ZAR. Open the full roadmap image only after user action.
+- Label the archive as “Our Other Games” / “Diğer Oyunlarımız”.
+- Use each game's logo as its cover. Use gameplay GIFs as previews.
+- ZAR may have richer presentation than the other games.
+- Use local social icons. External links open safely with `noopener noreferrer`.
+
+## Localization
+
+- Every visible translatable string must exist in both `translations.tr` and `translations.en` in `script.js`.
+- HTML contains Turkish fallback copy.
+- Use `data-i18n` for text, `data-i18n-html` only when markup is required, and the matching `alt` / `aria` attributes for accessibility.
+- The site selects Turkish for Turkish locale or Istanbul timezone, otherwise English. Manual choice is saved locally.
+
+## Responsive and Accessibility Rules
+
+- Support 320px-wide phones through desktop screens.
+- Interactive targets must be at least 44px high on touch screens.
+- Keep keyboard focus visible and preserve Escape-to-close for the mobile menu.
+- Mobile game media must support tap and keyboard preview; desktop keeps hover preview.
+- Do not rely on hover alone for an action.
+- Avoid horizontal scrolling. Test long Turkish and English strings.
+- Respect `prefers-reduced-motion`.
+
+## Asset Rules
+
+- Game assets live in `assets/images/games/<game-slug>/`.
+- Social icons live in `assets/images/social/`.
+- Optimize new media before adding it. Preserve meaningful `alt` text.
+- Do not replace logos with arbitrary gameplay screenshots.
+
+## Change Checklist
+
+1. Update both languages.
+2. Check all local asset paths.
+3. Check desktop and mobile layouts.
+4. Test menu, language buttons, external links, GIF previews, and Roadmap.
+5. Run `node --check script.js` and inspect browser console errors.
+6. Update this file when a new system, section, dependency, or convention is introduced.

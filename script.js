@@ -6,10 +6,10 @@ const translations = {
     metaDescription: "Happy Seal Games ve geliştirme aşamasındaki strateji oyunu ZAR hakkında bilgi edinin. ZAR Alpha sürümünü itch.io üzerinden deneyin.",
     ogDescription: "Bağımsız oyunlar, güçlü fikirler ve bolca eğlence. ZAR Alpha şimdi itch.io'da.",
     skip: 'İçeriğe geç', brandHome: 'Happy Seal Games ana sayfa', navLabel: 'Ana menü', languageLabel: 'Dil seçimi',
-    navAbout: 'Hakkımızda', navRoadmap: 'Yol Haritası', navGames: 'Oyunlarımız', navContact: 'İletişim', navAlpha: "ZAR Alpha'yı Oyna ↗",
+    navAbout: 'Hakkımızda', navGames: 'Diğer Oyunlarımız', navContact: 'İletişim', navAlpha: "ZAR Alpha'yı Oyna ↗",
     menuOpen: 'Menüyü aç', menuClose: 'Menüyü kapat', heroEyebrow: 'Happy Seal Games sunar',
-    heroTitle: 'Oyunlar<br><span>yapıyoruz.</span>', heroCopy: 'Bağımsız ruhla, güçlü fikirleri eğlenceli ve unutulmaz oyun dünyalarına dönüştürüyoruz.',
-    heroTry: 'Oyunumuzu Keşfet <span aria-hidden="true">↓</span>', heroDiscover: 'Bizi Tanı <span aria-hidden="true">→</span>',
+    heroTitle: 'Oyunlar<br><span>yapıyoruz.</span>', heroCopy: "Bağımsız ruhla, güçlü fikirleri eğlenceli ve unutulmaz oyun dünyalarına dönüştürüyoruz. Şu anda fizik tabanlı, zar odaklı 3D roguelike oyunumuz ZAR'ı geliştiriyoruz.",
+    heroTry: 'ZAR\'ı Keşfet <span aria-hidden="true">↓</span>', heroDiscover: 'Bizi Tanı <span aria-hidden="true">→</span>',
     heroAlt: 'Happy Seal Games logosu', heroSticker: 'BAĞIMSIZ<br>STÜDYO', aboutEyebrow: 'Biz kimiz?',
     aboutTitle: 'Küçük ekip.<br>Büyük oyunlar.', aboutLogoAlt: 'Mutlu fok maskotlu Happy Seal Games logosu',
     aboutLead: 'Happy Seal Games, eğlenceli fikirleri kendine özgü dünyalara dönüştüren bağımsız bir oyun geliştirme ekibi.',
@@ -23,7 +23,7 @@ const translations = {
     zarCharacterAlt: "ZAR'ın takım elbiseli ana karakteri", zarSpeech: 'Zarlarını at. Kombinasyonunu kur. Koşuyu değiştir.',
     zarGameplayEyebrow: 'Koşunu nasıl kuracaksın?', zarGameplayTitle: 'Zarlar. Kalıntılar. Sonsuz kombinasyon.',
     zarGameplayAlt: 'ZAR oynanış ekranı', zarGameplayCaption: 'Zarlarını fizik tabanlı arenaya at ve sonucu stratejine dönüştür.',
-    zarLoadoutAlt: 'ZAR zar ve kalıntı yönetimi', zarLoadoutCaption: 'Zarlarını ve kalıntılarını yönet.',
+    zarLoadoutAlt: 'ZAR puan ve çarpan hesabı', zarLoadoutCaption: 'Daha sert vurmak için puan × çarpan değerini büyüt.',
     zarBuildsAlt: 'ZAR zar kombinasyonları', zarBuildsCaption: 'Her koşuda farklı bir yapı kur.',
     zarRelicsAlt: 'ZAR kalıntı sistemi', zarRelicsCaption: 'Kalıntıları birleştir, etkileri katla.',
     zarPhysicsAlt: 'ZAR fizik tabanlı zar atışları', zarPhysicsCaption: 'Her fiziksel atış yeni bir olasılık yaratır.',
@@ -31,7 +31,7 @@ const translations = {
     roadmapEyebrow: 'Sırada ne var?', roadmapTitle: 'ZAR yol haritası', roadmapBody: "Alpha'dan Steam demosuna uzanan geliştirme planımızı ayrı pencerede incele.",
     roadmapOpen: 'ZAR yol haritasını aç', roadmapButton: 'Yol Haritasını Aç <span aria-hidden="true">↗</span>',
     gamesEyebrow: 'Happy Seal Games arşivi', gamesTitle: 'Diğer oyunlarımıza göz at', gamesIntro: 'Game jam deneylerinden strateji oyunlarına uzanan ücretsiz projelerimizi keşfet.',
-    playOnItch: 'itch.io\'da Oyna <span aria-hidden="true">↗</span>', watchGameplay: '<span aria-hidden="true">▶</span> Oynanışı İzle', hoverToPreview: 'Oynanışı görmek için üzerine gel',
+    playOnItch: 'itch.io\'da Oyna <span aria-hidden="true">↗</span>', watchGameplay: 'Oynanışı İzle', hoverToPreview: 'Oynanışı görmek için üzerine gel', tapToPreview: 'Oynanışı görmek için dokun', tapToCover: 'Kapağa dönmek için dokun',
     pawsGenre: 'Bullet Hell · Aksiyon', pawsDescription: 'Simülasyon çökmeden önce geçmiş hareketlerini tekrarlayan klonlarına karşı savaş. Desenlerini öğren, saldırılardan sıyrıl ve en iyi sürümün ol.', pawsAlt: 'Paws Inc. logosu', pawsGameplayAlt: 'Paws Inc. oynanış görüntüsü',
     totomonGenre: 'Roguelike · Auto Battler', totomonDescription: 'Totomon takımını seç, otomatik savaşlara gir ve güçlü mutasyon yollarını yönet. Sinerjiler kurarak en büyük eğitmen ol.', totomonAlt: 'Totomon logosu', totomonGameplayAlt: 'Totomon oynanış görüntüsü',
     collectorogueGenre: '3D · Roguelike', collectorogueDescription: 'Büyülü masaya ganimet istifle, maceracıyı güçlendir ve ortalığı dağıtan kediye karşı düzenini koru.', collectorogueAlt: 'Collectorogue logosu', collectorogueGameplayAlt: 'Collectorogue oynanış görüntüsü',
@@ -47,10 +47,10 @@ const translations = {
     metaDescription: 'Discover Happy Seal Games and ZAR, our strategy game currently in development. Play the ZAR Alpha on itch.io.',
     ogDescription: 'Independent games, bold ideas, and plenty of fun. ZAR Alpha is now available on itch.io.',
     skip: 'Skip to content', brandHome: 'Happy Seal Games home page', navLabel: 'Main navigation', languageLabel: 'Language selection',
-    navAbout: 'About Us', navRoadmap: 'Roadmap', navGames: 'Our Games', navContact: 'Contact', navAlpha: 'Play the ZAR Alpha ↗',
+    navAbout: 'About Us', navGames: 'Our Other Games', navContact: 'Contact', navAlpha: 'Play the ZAR Alpha ↗',
     menuOpen: 'Open menu', menuClose: 'Close menu', heroEyebrow: 'Happy Seal Games presents',
-    heroTitle: 'We make<br><span>games.</span>', heroCopy: 'We turn bold ideas into playful, memorable game worlds with an independent spirit.',
-    heroTry: 'Discover Our Game <span aria-hidden="true">↓</span>', heroDiscover: 'Meet the Studio <span aria-hidden="true">→</span>',
+    heroTitle: 'We make<br><span>games.</span>', heroCopy: 'We turn bold ideas into playful, memorable game worlds with an independent spirit. We are currently developing ZAR, our physics-based, dice-driven 3D roguelike.',
+    heroTry: 'Discover ZAR <span aria-hidden="true">↓</span>', heroDiscover: 'Meet the Studio <span aria-hidden="true">→</span>',
     heroAlt: 'Happy Seal Games logo', heroSticker: 'INDIE<br>STUDIO', aboutEyebrow: 'Who are we?',
     aboutTitle: 'Small team.<br>Big games.', aboutLogoAlt: 'Happy Seal Games logo featuring a cheerful seal mascot',
     aboutLead: 'Happy Seal Games is an independent game development team turning playful ideas into distinctive worlds.',
@@ -64,7 +64,7 @@ const translations = {
     zarCharacterAlt: "ZAR's suited main character", zarSpeech: 'Roll your dice. Build your combo. Change the run.',
     zarGameplayEyebrow: 'How will you build your run?', zarGameplayTitle: 'Dice. Relics. Endless combinations.',
     zarGameplayAlt: 'ZAR gameplay screen', zarGameplayCaption: 'Throw your dice into the physics-based arena and turn the result into strategy.',
-    zarLoadoutAlt: 'ZAR dice and relic management', zarLoadoutCaption: 'Manage your dice and relics.',
+    zarLoadoutAlt: 'ZAR points and multiplier calculation', zarLoadoutCaption: 'Make points × multiplier greater to hit harder.',
     zarBuildsAlt: 'ZAR dice combinations', zarBuildsCaption: 'Build a different setup every run.',
     zarRelicsAlt: 'ZAR relic system', zarRelicsCaption: 'Combine relics and multiply their effects.',
     zarPhysicsAlt: 'Physics-based dice rolls in ZAR', zarPhysicsCaption: 'Every physical roll creates a new possibility.',
@@ -72,7 +72,7 @@ const translations = {
     roadmapEyebrow: "What's next?", roadmapTitle: 'ZAR Roadmap', roadmapBody: 'Open our development plan from Alpha to the Steam demo in a separate window.',
     roadmapOpen: 'Open the ZAR roadmap', roadmapButton: 'View the Roadmap <span aria-hidden="true">↗</span>',
     gamesEyebrow: 'The Happy Seal Games archive', gamesTitle: 'Check our other games', gamesIntro: 'Explore our free projects, from game jam experiments to strategy games.',
-    playOnItch: 'Play on itch.io <span aria-hidden="true">↗</span>', watchGameplay: '<span aria-hidden="true">▶</span> Watch Gameplay', hoverToPreview: 'Hover to preview gameplay',
+    playOnItch: 'Play on itch.io <span aria-hidden="true">↗</span>', watchGameplay: 'Watch Gameplay', hoverToPreview: 'Hover to preview gameplay', tapToPreview: 'Tap to preview gameplay', tapToCover: 'Tap to return to cover',
     pawsGenre: 'Bullet Hell · Action', pawsDescription: 'Fight clones that repeat your past movements before the simulation collapses. Learn their patterns, dash through attacks, and become your best self.', pawsAlt: 'Paws Inc. logo', pawsGameplayAlt: 'Paws Inc. gameplay preview',
     totomonGenre: 'Roguelike · Auto Battler', totomonDescription: 'Choose your Totomon team, enter automatic battles, and guide powerful mutation paths. Build synergies and become the greatest trainer.', totomonAlt: 'Totomon logo', totomonGameplayAlt: 'Totomon gameplay preview',
     collectorogueGenre: '3D · Roguelike', collectorogueDescription: 'Stack loot on an enchanted table to power an adventurer, then keep your setup intact when a chaotic cat scatters everything.', collectorogueAlt: 'Collectorogue logo', collectorogueGameplayAlt: 'Collectorogue gameplay preview',
@@ -124,6 +124,7 @@ function setLanguage(language, remember = false) {
     button.classList.toggle('is-active', active);
     button.setAttribute('aria-pressed', String(active));
   });
+  updatePreviewControls(copy);
   menuButton.querySelector('.sr-only').textContent = mainNav.classList.contains('is-open') ? copy.menuClose : copy.menuOpen;
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -140,6 +141,7 @@ setLanguage(detectLanguage());
 
 menuButton?.addEventListener('click', () => {
   const isOpen = mainNav.classList.toggle('is-open');
+  document.body.classList.toggle('menu-open', isOpen);
   menuButton.setAttribute('aria-expanded', String(isOpen));
   menuButton.querySelector('.sr-only').textContent = isOpen ? translations[currentLanguage].menuClose : translations[currentLanguage].menuOpen;
 });
@@ -147,7 +149,48 @@ menuButton?.addEventListener('click', () => {
 mainNav?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     mainNav.classList.remove('is-open');
+    document.body.classList.remove('menu-open');
     menuButton?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape' || !mainNav?.classList.contains('is-open')) return;
+  mainNav.classList.remove('is-open');
+  document.body.classList.remove('menu-open');
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.focus();
+});
+
+function usesTouchPreview() {
+  return window.matchMedia('(hover: none), (pointer: coarse)').matches;
+}
+
+function updatePreviewControls(copy) {
+  document.querySelectorAll('.game-card-media').forEach((media) => {
+    if (!usesTouchPreview()) return;
+    const isPreviewing = media.classList.contains('is-previewing');
+    const label = isPreviewing ? copy.tapToCover : copy.tapToPreview;
+    media.setAttribute('aria-label', label);
+    const hint = media.querySelector('.preview-hint');
+    if (hint && usesTouchPreview()) hint.textContent = label;
+  });
+}
+
+document.querySelectorAll('.game-card-media').forEach((media) => {
+  if (!usesTouchPreview()) return;
+  media.setAttribute('role', 'button');
+  media.tabIndex = 0;
+  const togglePreview = () => {
+    if (!usesTouchPreview()) return;
+    media.classList.toggle('is-previewing');
+    updatePreviewControls(translations[currentLanguage]);
+  };
+  media.addEventListener('click', togglePreview);
+  media.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    togglePreview();
   });
 });
 
