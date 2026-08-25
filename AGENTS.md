@@ -6,8 +6,18 @@ Static, bilingual Happy Seal Games studio website. No build step or framework.
 
 - `index.html`: page structure, links, accessibility attributes.
 - `styles.css`: studio theme, ZAR comic theme, responsive layout.
-- `script.js`: Turkish/English copy, automatic language choice, menu, mobile previews, reveal behavior.
+- `content/tr.js`, `content/en.js`: translation tables and all localized copy.
+- `content/games.js`: other-games catalog, asset paths, external links, and translation keys.
+- `scripts/render-games.js`: renders game cards from the catalog.
+- `scripts/i18n.js`: language detection, key binding, persistence, and localization validation.
+- `scripts/navigation.js`: mobile menu behavior.
+- `scripts/game-previews.js`: touch, keyboard, and hover preview state.
+- `scripts/contact-form.js`: attachment validation and FormSubmit request.
+- `scripts/reveal.js`: reveal animations and deep links.
+- `scripts/main.js`: startup order only.
 - `assets/images/`: studio, social, and game media.
+
+Scripts are classic browser scripts so the site works through both GitHub Pages and direct `file://` opening. Keep their order in `index.html`.
 
 ## Product Rules
 
@@ -22,10 +32,12 @@ Static, bilingual Happy Seal Games studio website. No build step or framework.
 
 ## Localization
 
-- Every visible translatable string must exist in both `translations.tr` and `translations.en` in `script.js`.
-- HTML contains Turkish fallback copy.
+- Every visible translatable string must exist under the same key in both `content/tr.js` and `content/en.js`.
+- HTML declares localization keys. Do not embed fallback body copy in localized elements.
+- Static `<head>` SEO/social values are the only fallback-copy exception because some crawlers do not execute JavaScript.
 - Use `data-i18n` for text, `data-i18n-html` only when markup is required, and the matching `alt` / `aria` attributes for accessibility.
 - The site selects Turkish for Turkish locale or Istanbul timezone, otherwise English. Manual choice is saved locally.
+- `scripts/i18n.js` validates language-table parity and every key referenced by the rendered DOM. Keep validation enabled.
 
 ## Responsive and Accessibility Rules
 
@@ -70,5 +82,5 @@ Preserve semantic links, form labels, keyboard focus, touch targets, reduced-mot
 2. Check all local asset paths.
 3. Check desktop and mobile layouts.
 4. Test menu, language buttons, external links, GIF previews, and Roadmap.
-5. Run `node --check script.js` and inspect browser console errors.
+5. Run `node --check` for every file in `content/` and `scripts/`, then inspect browser console errors.
 6. Update this file when a new system, section, dependency, or convention is introduced.
