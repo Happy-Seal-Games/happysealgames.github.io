@@ -200,7 +200,47 @@
         <a class="button button-dark" href="mailto:happysealteam@gmail.com" data-i18n-html="emailButton">E-posta Gönder <span aria-hidden="true">↗</span></a>
       </div>
 
-      <div class="social-grid reveal" aria-label="Sosyal medya bağlantıları" data-i18n-aria="socialLabel">
+      <div class="contact-content reveal">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/ajax/happysealteam@gmail.com" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Happy Seal Games Website Message">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <label class="form-honey" aria-hidden="true">Leave empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <div class="contact-form-heading">
+            <p class="section-kicker" data-i18n="formEyebrow">Bize yaz</p>
+            <h3 data-i18n="formTitle">Mesajını doğrudan gönder</h3>
+            <p data-i18n="formIntro">E-posta uygulaması açmadan bize ulaş. E-posta adresi vermek zorunda değilsin.</p>
+          </div>
+
+          <div class="form-grid">
+            <label>
+              <span data-i18n="formName">Adın veya oyuncu nick'in</span>
+              <input type="text" name="name_or_nickname" required minlength="2" maxlength="60" autocomplete="nickname">
+            </label>
+            <label>
+              <span data-i18n="formSubject">Konu başlığı</span>
+              <input type="text" name="subject" required minlength="3" maxlength="100">
+            </label>
+            <label class="form-wide">
+              <span data-i18n="formMessage">Mesajın</span>
+              <textarea name="message" required minlength="10" maxlength="4000" rows="7"></textarea>
+            </label>
+            <label class="form-wide file-field">
+              <span data-i18n="formAttachment">Görsel veya dosya ekle (isteğe bağlı)</span>
+              <input id="contact-attachment" type="file" name="attachment" accept="image/png,image/jpeg,image/webp,image/gif,application/pdf,text/plain" multiple>
+              <small data-i18n="formAttachmentHelp">PNG, JPG, WEBP, GIF, PDF veya TXT · Toplam en fazla 10 MB</small>
+            </label>
+          </div>
+
+          <div class="form-submit-row">
+            <button class="button button-dark" id="contact-submit" type="submit" data-i18n="formSubmit">Mesajı Gönder</button>
+            <p class="form-privacy" data-i18n="formPrivacy">Gönderilen bilgiler yalnızca mesajını bize ulaştırmak için FormSubmit üzerinden işlenir.</p>
+          </div>
+          <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="social-grid" aria-label="Sosyal medya bağlantıları" data-i18n-aria="socialLabel">
         <a class="social-instagram" href="https://www.instagram.com/happysealgames/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="fill" cx="17.5" cy="6.5" r="1.2"/></svg>
         </a>
@@ -225,6 +265,7 @@
         <a class="social-email" href="mailto:happysealteam@gmail.com" aria-label="E-posta" data-i18n-aria="emailLabel" title="happysealteam@gmail.com">
           <img src="assets/images/social/gmail.png" alt="" width="512" height="512">
         </a>
+        </div>
       </div>
     </section>
   </main>

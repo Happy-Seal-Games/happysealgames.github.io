@@ -36,6 +36,15 @@ Static, bilingual Happy Seal Games studio website. No build step or framework.
 - Avoid horizontal scrolling. Test long Turkish and English strings.
 - Respect `prefers-reduced-motion`.
 
+## Contact Form
+
+- `#contact-form` posts multipart data to FormSubmit's AJAX endpoint for `happysealteam@gmail.com`.
+- Players may send a name/nickname, subject, message, and optional images, PDF, or text files without providing their email address.
+- Keep the total attachment limit at 10 MB and validate it before submission.
+- Keep the honeypot and CAPTCHA fields enabled.
+- Keep submission status messages translated and announced with `aria-live`.
+- FormSubmit requires one-time recipient activation when the endpoint is first used. If the recipient or form backend changes, update the form action, privacy copy, validation, and this section together.
+
 ## Asset Rules
 
 - Game assets live in `assets/images/games/<game-slug>/`.

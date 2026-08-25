@@ -40,6 +40,11 @@ const translations = {
     sylvaGenre: 'Tower Defense · Roguelike', sylvaDescription: 'Kutsal ağacı bitmeyen böcek dalgalarına karşı savun; tohumları ek, bitkilerini geliştir ve saldırılara hazırlan.', sylvaAlt: 'Sylva logosu', sylvaGameplayAlt: 'Sylva oynanış görüntüsü',
     contactEyebrow: 'Bağlantıda kal', contactTitle: 'Yeni bir şey<br>yaklaşıyor!',
     contactBody: 'ZAR güncellemeleri, geliştirme notları ve stüdyodan haberler için bizi takip et.', emailButton: 'E-posta Gönder <span aria-hidden="true">↗</span>',
+    formEyebrow: 'Bize yaz', formTitle: 'Mesajını doğrudan gönder', formIntro: 'E-posta uygulaması açmadan bize ulaş. E-posta adresi vermek zorunda değilsin.',
+    formName: 'Adın veya oyuncu nick\'in', formSubject: 'Konu başlığı', formMessage: 'Mesajın', formAttachment: 'Görsel veya dosya ekle (isteğe bağlı)',
+    formAttachmentHelp: 'PNG, JPG, WEBP, GIF, PDF veya TXT · Toplam en fazla 10 MB', formSubmit: 'Mesajı Gönder', formSending: 'Gönderiliyor…',
+    formSuccess: 'Mesajın ulaştı. Teşekkürler!', formError: 'Mesaj gönderilemedi. Lütfen tekrar dene veya e-posta bağlantısını kullan.', formTooLarge: 'Eklerin toplam boyutu 10 MB sınırını aşıyor.',
+    formPrivacy: 'Gönderilen bilgiler yalnızca mesajını bize ulaştırmak için FormSubmit üzerinden işlenir.',
     socialLabel: 'Sosyal medya bağlantıları', emailLabel: 'E-posta', footerTagline: 'Bağımsız oyunlar. Güçlü fikirler. Mutlu foklar.',
     backToTop: 'Yukarı dön ↑', copyright: '© <span id="year"></span> Happy Seal Games. Tüm hakları saklıdır.'
   },
@@ -81,6 +86,11 @@ const translations = {
     sylvaGenre: 'Tower Defense · Roguelike', sylvaDescription: 'Defend the sacred tree from endless insect waves by planting seeds, growing defensive plants, and preparing between attacks.', sylvaAlt: 'Sylva logo', sylvaGameplayAlt: 'Sylva gameplay preview',
     contactEyebrow: 'Stay connected', contactTitle: 'Something new<br>is coming!',
     contactBody: 'Follow us for ZAR updates, development notes, and news from the studio.', emailButton: 'Send an Email <span aria-hidden="true">↗</span>',
+    formEyebrow: 'Write to us', formTitle: 'Send your message directly', formIntro: 'Reach us without opening an email app. You do not need to provide an email address.',
+    formName: 'Your name or player nickname', formSubject: 'Subject', formMessage: 'Your message', formAttachment: 'Add an image or file (optional)',
+    formAttachmentHelp: 'PNG, JPG, WEBP, GIF, PDF, or TXT · 10 MB total maximum', formSubmit: 'Send Message', formSending: 'Sending…',
+    formSuccess: 'Your message has arrived. Thank you!', formError: 'The message could not be sent. Please try again or use the email link.', formTooLarge: 'Your attachments exceed the 10 MB total limit.',
+    formPrivacy: 'Submitted information is processed through FormSubmit only to deliver your message to us.',
     socialLabel: 'Social media links', emailLabel: 'Email', footerTagline: 'Independent games. Bold ideas. Happy seals.',
     backToTop: 'Back to top ↑', copyright: '© <span id="year"></span> Happy Seal Games. All rights reserved.'
   }
@@ -192,6 +202,50 @@ document.querySelectorAll('.game-card-media').forEach((media) => {
     event.preventDefault();
     togglePreview();
   });
+});
+
+const contactForm = document.getElementById('contact-form');
+const contactSubmit = document.getElementById('contact-submit');
+const contactStatus = document.getElementById('contact-status');
+const contactAttachment = document.getElementById('contact-attachment');
+const maxAttachmentBytes = 10 * 1024 * 1024;
+
+contactForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const copy = translations[currentLanguage];
+  const attachmentBytes = [...(contactAttachment?.files || [])].reduce((total, file) => total + file.size, 0);
+
+  contactStatus.className = 'form-status';
+  if (attachmentBytes > maxAttachmentBytes) {
+    contactStatus.textContent = copy.formTooLarge;
+    contactStatus.classList.add('is-error');
+    contactAttachment?.focus();
+    return;
+  }
+
+  contactSubmit.disabled = true;
+  contactSubmit.textContent = copy.formSending;
+  contactStatus.textContent = copy.formSending;
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' }
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || result.success === false || result.success === 'false') throw new Error('Submission failed');
+
+    contactForm.reset();
+    contactStatus.textContent = copy.formSuccess;
+    contactStatus.classList.add('is-success');
+  } catch {
+    contactStatus.textContent = copy.formError;
+    contactStatus.classList.add('is-error');
+  } finally {
+    contactSubmit.disabled = false;
+    contactSubmit.textContent = copy.formSubmit;
+  }
 });
 
 const observer = new IntersectionObserver((entries) => {
