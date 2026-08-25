@@ -12,6 +12,7 @@ Static, bilingual Happy Seal Games studio website. No build step or framework.
 ## Product Rules
 
 - Introduce Happy Seal Games before ZAR.
+- Keep the opening hero and studio/about story inside one unified `studio-intro` structure with a shared comic-book visual language.
 - Keep the general studio design clean. Concentrate comic-book styling inside the ZAR section.
 - Keep Roadmap inside ZAR. Open the full roadmap image only after user action.
 - Label the archive as “Our Other Games” / “Diğer Oyunlarımız”.
@@ -44,6 +45,17 @@ Static, bilingual Happy Seal Games studio website. No build step or framework.
 - Keep the honeypot and CAPTCHA fields enabled.
 - Keep submission status messages translated and announced with `aria-live`.
 - FormSubmit requires one-time recipient activation when the endpoint is first used. If the recipient or form backend changes, update the form action, privacy copy, validation, and this section together.
+
+## UI References
+
+The site adapts these MIT-licensed Uiverse interaction patterns to its own HTML, colors, content, responsiveness, and accessibility:
+
+- Comic ZAR buttons: `https://uiverse.io/Gautammsharma/wicked-cobra-3`
+- Brutalist contact inputs: `https://uiverse.io/0xnihilism/wise-lizard-57`
+- Comic game cards: `https://uiverse.io/chandrasek_6406/white-starfish-90`
+- Comic grouped navigation: `https://uiverse.io/chase2k25/tasty-newt-31`
+
+Preserve semantic links, form labels, keyboard focus, touch targets, reduced-motion support, and the established Happy Seal Games palette when evolving these patterns.
 
 ## Asset Rules
 
