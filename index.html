@@ -22,12 +22,14 @@
   <link rel="canonical" href="https://happy-seal-games.github.io/happysealgames.github.io/">
   <title>Happy Seal Games</title>
   <link rel="icon" href="assets/images/happy-seal-games-logo.png" type="image/png">
+  <script src="scripts/theme.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="top-anchor" id="top" aria-hidden="true"></div>
   <a class="skip-link" href="#main" data-i18n="skip"></a>
 
-  <header class="site-header" id="top">
+  <header class="site-header">
     <a class="brand" href="#top" aria-label="Happy Seal Games ana sayfa" data-i18n-aria="brandHome">
       <strong data-i18n-html="brandName"></strong>
     </a>
@@ -40,7 +42,7 @@
     <nav class="main-nav" id="main-nav" aria-label="Ana menü" data-i18n-aria="navLabel">
       <div class="nav-links">
         <a href="#about-us" data-i18n="navAbout"></a>
-        <a href="#zar">ZAR</a>
+        <a class="nav-zar-link" href="#zar"><img class="zar-mini-logo nav-zar-logo" src="assets/images/games/zar/mini-logo.png" alt="" width="630" height="500"><span>ZAR</span></a>
         <a href="#other-games" data-i18n="navGames"></a>
         <a href="#contact" data-i18n="navContact"></a>
       </div>
@@ -48,7 +50,14 @@
         <button type="button" data-language="tr" aria-label="Türkçe">TR</button>
         <button type="button" data-language="en" aria-label="English">EN</button>
       </div>
-      <a class="nav-cta" href="https://happysealgames.itch.io/zar" target="_blank" rel="noopener noreferrer"><img class="zar-mini-logo" src="assets/images/games/zar/mini-logo.png" alt="" width="630" height="500"><span data-i18n="navAlpha"></span></a>
+      <label class="theme-switch" for="theme-toggle">
+        <input class="sr-only" id="theme-toggle" type="checkbox" data-i18n-aria="themeToggle">
+        <span class="theme-switch-track" aria-hidden="true">
+          <span class="theme-switch-label theme-switch-day" data-i18n="themeDay"></span>
+          <span class="theme-switch-label theme-switch-night" data-i18n="themeNight"></span>
+          <span class="theme-switch-thumb"><span class="theme-switch-crescent"></span></span>
+        </span>
+      </label>
     </nav>
   </header>
 

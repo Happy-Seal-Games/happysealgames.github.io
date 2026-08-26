@@ -10,6 +10,7 @@ Static, bilingual Happy Seal Games studio website. No build step or framework.
 - `content/games.js`: other-games catalog, asset paths, external links, and translation keys.
 - `scripts/render-games.js`: renders game cards from the catalog.
 - `scripts/i18n.js`: language detection, key binding, persistence, and localization validation.
+- `scripts/theme.js`: early system-theme detection, manual theme choice, and persistence.
 - `scripts/navigation.js`: mobile menu behavior.
 - `scripts/game-previews.js`: touch, keyboard, and hover preview state.
 - `scripts/contact-form.js`: attachment validation and FormSubmit request.
@@ -67,6 +68,7 @@ The site adapts these MIT-licensed Uiverse interaction patterns to its own HTML,
 - Brutalist contact inputs: `https://uiverse.io/0xnihilism/wise-lizard-57`
 - Comic game cards: `https://uiverse.io/chandrasek_6406/white-starfish-90`
 - Comic grouped navigation: `https://uiverse.io/chase2k25/tasty-newt-31`
+- Comic day/night theme switch: `https://uiverse.io/chase2k25/thin-pug-46`
 
 Preserve semantic links, form labels, keyboard focus, touch targets, reduced-motion support, and the established Happy Seal Games palette when evolving these patterns.
 

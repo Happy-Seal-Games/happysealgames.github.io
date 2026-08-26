@@ -3,6 +3,7 @@
 
   function init() {
     const app = global.HSG;
+    app.Theme.init();
     app.RenderGames.init();
     app.I18n.init();
     app.Navigation.init();
