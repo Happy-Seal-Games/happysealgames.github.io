@@ -2,6 +2,16 @@
   'use strict';
 
   const app = global.HSG = global.HSG || {};
+  const sectionAliases = Object.freeze({
+    hakkimizda: 'about-us',
+    oyunlar: 'other-games',
+    iletisim: 'contact',
+    'yol-haritasi': 'roadmap'
+  });
+
+  function normalizeSection(section) {
+    return sectionAliases[section] || section;
+  }
 
   function revealSections() {
     if (!('IntersectionObserver' in global)) {
@@ -20,7 +30,7 @@
   }
 
   function scrollToRequestedSection() {
-    const requestedSection = new URLSearchParams(global.location.search).get('section');
+    const requestedSection = normalizeSection(new URLSearchParams(global.location.search).get('section'));
     if (requestedSection) {
       const scroll = () => document.getElementById(requestedSection)?.scrollIntoView();
       scroll();
@@ -29,7 +39,10 @@
     }
 
     if (!global.location.hash) return;
-    try { document.querySelector(global.location.hash)?.scrollIntoView(); } catch {}
+    const hashSection = decodeURIComponent(global.location.hash.slice(1));
+    const normalizedSection = normalizeSection(hashSection);
+    if (hashSection !== normalizedSection) global.history.replaceState(null, '', `#${normalizedSection}`);
+    document.getElementById(normalizedSection)?.scrollIntoView();
   }
 
   function init() {

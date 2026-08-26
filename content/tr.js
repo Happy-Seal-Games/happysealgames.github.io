@@ -22,6 +22,7 @@
     heroCopy: "Bağımsız ruhla, güçlü fikirleri eğlenceli ve unutulmaz oyun dünyalarına dönüştürüyoruz. Şu anda fizik tabanlı, zar odaklı 3D roguelike oyunumuz ZAR'ı geliştiriyoruz.",
     heroTry: 'ZAR\'ı Keşfet <span aria-hidden="true">↓</span>',
     heroDiscover: 'Bizi Tanı <span aria-hidden="true">→</span>',
+    nextSection: 'Stüdyo bilgilerine geç',
     heroAlt: 'Happy Seal Games logosu',
     heroSticker: 'BAĞIMSIZ<br>STÜDYO',
     aboutEyebrow: 'Biz kimiz?',

@@ -29,6 +29,7 @@ Scripts are classic browser scripts so the site works through both GitHub Pages 
 - Use each game's logo as its cover. Use gameplay GIFs as previews.
 - ZAR may have richer presentation than the other games.
 - Use local social icons. External links open safely with `noopener noreferrer`.
+- Keep public section hashes in English (`#about-us`, `#zar`, `#roadmap`, `#other-games`, `#contact`). Preserve legacy Turkish aliases in `scripts/reveal.js`.
 
 ## Localization
 

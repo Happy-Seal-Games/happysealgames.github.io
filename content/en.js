@@ -22,6 +22,7 @@
     heroCopy: 'We turn bold ideas into playful, memorable game worlds with an independent spirit. We are currently developing ZAR, our physics-based, dice-driven 3D roguelike.',
     heroTry: 'Discover ZAR <span aria-hidden="true">↓</span>',
     heroDiscover: 'Meet the Studio <span aria-hidden="true">→</span>',
+    nextSection: 'Go to studio information',
     heroAlt: 'Happy Seal Games logo',
     heroSticker: 'INDIE<br>STUDIO',
     aboutEyebrow: 'Who are we?',
