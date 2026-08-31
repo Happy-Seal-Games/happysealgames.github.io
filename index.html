@@ -194,7 +194,7 @@
       </div>
 
       <div class="contact-content reveal">
-        <form class="contact-form" id="contact-form" action="https://formsubmit.co/ajax/happysealteam@gmail.com" method="post" enctype="multipart/form-data">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/happysealteam@gmail.com" data-ajax-action="https://formsubmit.co/ajax/happysealteam@gmail.com" method="post" enctype="multipart/form-data">
           <input type="hidden" name="_subject" value="Happy Seal Games Website Message">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="true">
@@ -221,8 +221,8 @@
             </label>
             <label class="form-wide file-field">
               <span data-i18n="formAttachment"></span>
-              <input id="contact-attachment" type="file" name="attachment" accept="image/png,image/jpeg,image/webp,image/gif,application/pdf,text/plain" multiple>
-              <small data-i18n="formAttachmentHelp"></small>
+              <input id="contact-attachment" type="file" name="attachment" accept="image/png,image/jpeg,image/webp,image/gif,application/pdf,text/plain" multiple aria-describedby="contact-attachment-help">
+              <small id="contact-attachment-help" data-i18n="formAttachmentHelp"></small>
             </label>
           </div>
 

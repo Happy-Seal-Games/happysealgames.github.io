@@ -315,7 +315,9 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible { outline: 
 .form-grid input:hover, .form-grid textarea:hover { border-color: #8e8d85; }
 .form-grid input:focus, .form-grid textarea:focus { border-color: var(--blue); outline: 3px solid rgba(12,166,207,.2); }
 .file-field input { padding: .55rem; border-style: dashed; cursor: pointer; }
-.file-field input::file-selector-button { min-height: 38px; margin-right: .75rem; padding: .55rem .8rem; color: var(--white); background: var(--ink); border: 0; border-radius: 8px; font-weight: 900; cursor: pointer; }
+.file-field input::file-selector-button { min-height: 44px; margin-right: .75rem; padding: .55rem .8rem; color: var(--ink); background: var(--yellow); border: 2px solid var(--ink); border-radius: 8px; font-weight: 900; cursor: pointer; }
+.file-field input::file-selector-button:hover { background: var(--white); }
+.file-field input[type="file"]:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .file-field small { color: #6b6a63; font-weight: 500; }
 .form-submit-row { display: flex; align-items: center; gap: 1rem 1.4rem; margin-top: 1.4rem; }
 .form-submit-row .button { flex: 0 0 auto; min-height: 50px; cursor: pointer; }
