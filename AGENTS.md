@@ -55,7 +55,7 @@ Scripts are classic browser scripts so the site works through both GitHub Pages 
 
 - `#contact-form` posts attachments through FormSubmit's native multipart endpoint for `happysealteam@gmail.com`; the sender completes verification on FormSubmit. Messages without attachments use the `data-ajax-action` endpoint and keep inline status feedback.
 - Keep each selected file under a distinct multipart field (`attachment`, `attachment_2`, etc.) via the `formdata` event so multiple uploads are not overwritten.
-- Players may send a name/nickname, subject, message, and optional images, PDF, or text files without providing their email address.
+- Players must provide a name/nickname, email address, subject, and message; images, PDF, or text attachments are optional. Keep the required email input as `type="email" name="email"` so native validation applies and FormSubmit uses it as the Reply-To address in both submission flows.
 - Keep the total attachment limit at 10 MB and validate it before submission.
 - Keep the honeypot and CAPTCHA fields enabled.
 - Keep submission status messages translated and announced with `aria-live`.
