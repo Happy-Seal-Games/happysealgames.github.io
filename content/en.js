@@ -49,7 +49,6 @@
     feature2: '<span>02</span> Physics-based rolls and changing runs',
     feature3: '<span>03</span> An Alpha shaped by community feedback',
     playItch: 'Play the ZAR Alpha <span aria-hidden="true">↗</span>',
-    alphaNotice: 'ZAR early Alpha is playable now. Discover it below ↓',
     alphaAvailable: 'PLAYABLE NOW',
     alphaPlayTitle: 'Roll the dice. Join the Alpha!',
     alphaPlayBody: 'ZAR is still in early development, but you can already play. Try the Alpha now on itch.io.',
