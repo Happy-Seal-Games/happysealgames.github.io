@@ -35,6 +35,13 @@
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && mainNav.classList.contains('is-open')) closeMenu({ focusButton: true });
     });
+    document.addEventListener('click', (event) => {
+      if (!mainNav.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+    document.addEventListener('focusin', (event) => {
+      if (!mainNav.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+    global.matchMedia('(max-width: 980px)').addEventListener('change', () => closeMenu());
     document.addEventListener('hsg:languagechange', (event) => updateLabel(event.detail.copy));
     updateLabel();
   }

@@ -12,10 +12,13 @@ Static, bilingual Happy Seal Games studio website. No build step or framework.
 - `scripts/i18n.js`: language detection, key binding, persistence, and localization validation.
 - `scripts/theme.js`: early system-theme detection, manual theme choice, and persistence.
 - `scripts/navigation.js`: mobile menu behavior.
-- `scripts/game-previews.js`: touch, keyboard, and hover preview state.
+- `scripts/game-previews.js`: touch, keyboard, and hover preview state. All media controls stay keyboard accessible on desktop and mobile, with translated labels and `aria-pressed` state.
 - `scripts/contact-form.js`: attachment validation and FormSubmit request.
 - `scripts/reveal.js`: reveal animations and deep links.
 - `scripts/main.js`: startup order only.
+- `scripts/characters.js`: Sir Rollington-first character carousel; arrows, keyboard and horizontal swipe/drag, no autoplay. Each character has a distinct comic background.
+- `scripts/zar-updates.js`: Steam-first Steam/roadmap carousel; named selectors, arrows, keyboard and horizontal swipe/drag, reduced-motion support, no autoplay. Explicit roadmap deep links select its panel; the full image loads only after user action.
+- `scripts/zar-links.js`: catalog video links and the inline, lazy-loaded YouTube privacy-enhanced Alpha trailer. Keep video URLs in `content/games.js`; no autoplay.
 - `assets/images/`: studio, social, and game media.
 
 Scripts are classic browser scripts so the site works through both GitHub Pages and direct `file://` opening. Keep their order in `index.html`.

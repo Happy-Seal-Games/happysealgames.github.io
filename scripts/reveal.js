@@ -25,7 +25,7 @@
         entry.target.classList.add('is-visible');
         observer.unobserve(entry.target);
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
     document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
   }
 
@@ -39,7 +39,9 @@
     }
 
     if (!global.location.hash) return;
-    const hashSection = decodeURIComponent(global.location.hash.slice(1));
+    let hashSection;
+    try { hashSection = decodeURIComponent(global.location.hash.slice(1)); }
+    catch { return; }
     const normalizedSection = normalizeSection(hashSection);
     if (hashSection !== normalizedSection) global.history.replaceState(null, '', `#${normalizedSection}`);
     document.getElementById(normalizedSection)?.scrollIntoView();

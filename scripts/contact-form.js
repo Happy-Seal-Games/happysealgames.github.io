@@ -61,22 +61,26 @@
       submit.textContent = copy.formSending;
       status.textContent = copy.formSending;
 
+      const controller = new AbortController();
+      const timeout = global.setTimeout(() => controller.abort(), 20000);
       try {
         const response = await global.fetch(form.dataset.ajaxAction, {
           method: 'POST',
           body: new FormData(form),
-          headers: { Accept: 'application/json' }
+          headers: { Accept: 'application/json' },
+          signal: controller.signal
         });
         const result = await response.json().catch(() => ({}));
         if (!response.ok || result.success === false || result.success === 'false') throw new Error('Submission failed');
 
         form.reset();
-        status.textContent = copy.formSuccess;
+        status.textContent = app.I18n.getCopy().formSuccess;
         status.classList.add('is-success');
       } catch {
-        status.textContent = copy.formError;
+        status.textContent = app.I18n.getCopy().formError;
         status.classList.add('is-error');
       } finally {
+        global.clearTimeout(timeout);
         submit.disabled = false;
         submit.textContent = app.I18n.getCopy().formSubmit;
       }

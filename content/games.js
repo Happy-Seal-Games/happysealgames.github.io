@@ -2,6 +2,11 @@
   'use strict';
 
   const data = global.HSG_DATA = global.HSG_DATA || {};
+  data.zarVideos = Object.freeze({
+    alphaTrailer: 'https://www.youtube.com/watch?v=vLUDY2deq0I',
+    fullGameplay: 'https://www.youtube.com/watch?v=JJFM3k7wbZ4&t=1576s'
+  });
+
   data.games = Object.freeze([
     {
       slug: 'paws-inc', title: 'Paws Inc.', genreKey: 'pawsGenre', descriptionKey: 'pawsDescription',

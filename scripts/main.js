@@ -5,7 +5,10 @@
     const app = global.HSG;
     app.Theme.init();
     app.RenderGames.init();
+    app.ZarLinks.init();
     app.I18n.init();
+    app.Characters.init();
+    app.ZarUpdates.init();
     app.Navigation.init();
     app.GamePreviews.init();
     app.ContactForm.init();

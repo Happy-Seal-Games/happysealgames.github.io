@@ -12,25 +12,17 @@
     if (!copy) return;
     document.querySelectorAll('.game-card-media').forEach((media) => {
       const hint = media.querySelector('.preview-hint');
-      if (!usesTouchPreview()) {
-        media.removeAttribute('role');
-        media.removeAttribute('tabindex');
-        media.removeAttribute('aria-label');
-        media.classList.remove('is-previewing');
-        if (hint) hint.textContent = copy.hoverToPreview;
-        return;
-      }
-
       media.setAttribute('role', 'button');
       media.tabIndex = 0;
       const label = media.classList.contains('is-previewing') ? copy.tapToCover : copy.tapToPreview;
-      media.setAttribute('aria-label', label);
-      if (hint) hint.textContent = label;
+      const title = media.closest('.game-card').querySelector('h3').textContent;
+      media.setAttribute('aria-label', `${title}: ${label}`);
+      media.setAttribute('aria-pressed', String(media.classList.contains('is-previewing')));
+      if (hint) hint.textContent = usesTouchPreview() || media.classList.contains('is-previewing') ? label : copy.hoverToPreview;
     });
   }
 
   function togglePreview(media) {
-    if (!usesTouchPreview()) return;
     media.classList.toggle('is-previewing');
     updateControls();
   }
