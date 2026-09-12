@@ -49,7 +49,7 @@
     feature2: '<span>02</span> Fizik tabanlı atışlar ve her turda yeni olasılıklar',
     feature3: '<span>03</span> Topluluk geri bildirimiyle gelişen Alpha',
     playItch: 'ZAR Alpha\'yı Oyna <span aria-hidden="true">↗</span>',
-    alphaTrailerTitle: 'ZAR Alpha Fragmanı',
+    alphaTrailerTitle: 'ZAR Alpha Tanıtım Videosu',
     watchFullGameplay: 'Tam Oynanışı İzle <span aria-hidden="true">↗</span>',
     zarCharacterAlt: "ZAR'ın oynanabilir karakteri Sir Rollington",
     zarCharacterLabel: 'Sir Rollington',
