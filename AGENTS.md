@@ -13,7 +13,6 @@ Static, bilingual Happy Seal Games studio website. No build step or framework.
 - `scripts/theme.js`: early system-theme detection, manual theme choice, and persistence.
 - `scripts/navigation.js`: mobile menu behavior.
 - `scripts/game-previews.js`: touch, keyboard, and hover preview state. All media controls stay keyboard accessible on desktop and mobile, with translated labels and `aria-pressed` state.
-- `scripts/contact-form.js`: attachment validation and FormSubmit request.
 - `scripts/reveal.js`: reveal animations and deep links.
 - `scripts/main.js`: startup order only.
 - `scripts/characters.js`: Sir Rollington-first character carousel; arrows, keyboard and horizontal swipe/drag, no autoplay. Each character has a distinct comic background.
@@ -54,22 +53,15 @@ Scripts are classic browser scripts so the site works through both GitHub Pages 
 - Avoid horizontal scrolling. Test long Turkish and English strings.
 - Respect `prefers-reduced-motion`.
 
-## Contact Form
+## Contact
 
-- `#contact-form` posts attachments through FormSubmit's native multipart endpoint for `happysealteam@gmail.com`; the sender completes verification on FormSubmit. Messages without attachments use the `data-ajax-action` endpoint and keep inline status feedback.
-- Keep each selected file under a distinct multipart field (`attachment`, `attachment_2`, etc.) via the `formdata` event so multiple uploads are not overwritten.
-- Players must provide a name/nickname, email address, subject, and message; images, PDF, or text attachments are optional. Keep the required email input as `type="email" name="email"` so native validation applies and FormSubmit uses it as the Reply-To address in both submission flows.
-- Keep the total attachment limit at 10 MB and validate it before submission.
-- Keep the honeypot and CAPTCHA fields enabled.
-- Keep submission status messages translated and announced with `aria-live`.
-- FormSubmit requires one-time recipient activation when the endpoint is first used. If the recipient or form backend changes, update the form action, privacy copy, validation, and this section together.
+- Contact uses direct `mailto:happysealteam@gmail.com` links. Keep the email button, social email link, and both languages accessible; do not add a hosted form backend.
 
 ## UI References
 
 The site adapts these MIT-licensed Uiverse interaction patterns to its own HTML, colors, content, responsiveness, and accessibility:
 
 - Comic ZAR buttons: `https://uiverse.io/Gautammsharma/wicked-cobra-3`
-- Brutalist contact inputs: `https://uiverse.io/0xnihilism/wise-lizard-57`
 - Comic game cards: `https://uiverse.io/chandrasek_6406/white-starfish-90`
 - Comic grouped navigation: `https://uiverse.io/chase2k25/tasty-newt-31`
 - Comic day/night theme switch: `https://uiverse.io/chase2k25/thin-pug-46`

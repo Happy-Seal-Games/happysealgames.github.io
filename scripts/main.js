@@ -11,7 +11,6 @@
     app.ZarUpdates.init();
     app.Navigation.init();
     app.GamePreviews.init();
-    app.ContactForm.init();
     app.Reveal.init();
   }
 
